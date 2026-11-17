@@ -11,21 +11,51 @@ Independent Frappe ecommerce builder, storefront API, and Vue dashboard extracte
 The app does not require Logi360. Store ownership uses the Frappe `User` DocType,
 and checkout stores ecommerce orders locally.
 
-## Local installation
+## Install on a new Frappe Bench
 
 ```bash
 cd /path/to/frappe-bench
-bench get-app /path/to/ecommerce
-bench --site your-site install-app ecommerce
-cd apps/ecommerce/dashboard
-npm ci
+bench get-app https://github.com/AnjanaDhakal/ecommerce.git
+bench --site your-site.example.com install-app ecommerce
+
+cd apps/ecommerce
+npm --prefix dashboard ci
 npm run build
-bench --site your-site migrate
+cd ../..
+
+bench --site your-site.example.com migrate
+bench --site your-site.example.com clear-cache
 bench restart
 ```
 
-Open `/ecommerce` for the dashboard. Published storefronts are served by the
-Frappe backend and can be routed through a separate domain or reverse proxy.
+Open `https://your-site.example.com/ecommerce` for the built dashboard.
+
+## Local development
+
+Run the Frappe backend in the first terminal:
+
+```bash
+cd /path/to/frappe-bench
+bench use your-site.example.com
+bench start
+```
+
+Run the Vue dashboard in the second terminal:
+
+```bash
+cd /path/to/frappe-bench/apps/ecommerce
+npm --prefix dashboard ci
+npm run dev
+```
+
+- Frappe backend: `http://localhost:8000`
+- Vue dashboard: `http://localhost:8080/ecommerce/website`
+
+Log in through Frappe when the Vue dashboard redirects you. The development
+server sends `/api` requests to Frappe on port `8000`.
+
+Published storefronts are served by the Frappe backend and can be routed
+through a separate domain or reverse proxy.
 
 Set these values in the ecommerce server's `site_config.json`:
 
