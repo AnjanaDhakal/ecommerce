@@ -57,7 +57,7 @@ export default {
       type: String,
       default: '2px',
     },
-  }
+  },
   data() {
     return {
       spinnerStyle: {
@@ -112,7 +112,7 @@ export default {
     -webkit-animation-duration: inherit;
     -webkit-animation-iteration-count: inherit;
     -webkit-animation-direction: inherit;
-  },
+  }
   100% {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
@@ -129,7 +129,7 @@ export default {
     -webkit-animation-duration: inherit;
     -webkit-animation-iteration-count: inherit;
     -webkit-animation-direction: inherit;
-  },
+  }
   100% {
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
