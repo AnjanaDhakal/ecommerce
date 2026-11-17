@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-09-14 12:25:55.258302",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product_name",
+  "slug",
+  "website",
+  "brand",
+  "catagories",
+  "categories",
+  "product_image",
+  "gallery_images",
+  "product_videos",
+  "publication_status",
+  "enable",
+  "continue_selling",
+  "varient",
+  "variants",
+  "column_break_iphs",
+  "product_description",
+  "long_description"
+ ],
+ "fields": [
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Data",
+   "label": "Product Name"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Link",
+   "label": "Website",
+   "options": "Ecommerce Vendor Website"
+  },
+  {
+   "fieldname": "column_break_iphs",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "product_image",
+   "fieldtype": "Attach Image",
+   "label": "Product Image"
+  },
+  {
+   "fieldname": "gallery_images",
+   "fieldtype": "JSON",
+   "label": "Gallery Images"
+  },
+  {
+   "fieldname": "product_videos",
+   "fieldtype": "JSON",
+   "label": "Product Videos"
+  },
+  {
+   "fieldname": "product_description",
+   "fieldtype": "Long Text",
+   "label": "Product Description"
+  },
+  {
+   "default": "Published",
+   "fieldname": "publication_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Storefront Status",
+   "options": "Published\nHidden\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Brand",
+   "options": "Ecommerce Brand"
+  },
+  {
+   "fieldname": "catagories",
+   "fieldtype": "Link",
+   "label": "Catagories",
+   "options": "Ecommerce Categories"
+  },
+  {
+   "fieldname": "categories",
+   "fieldtype": "Table",
+   "label": "Categories",
+   "options": "Ecommerce Product Category"
+  },
+  {
+   "fieldname": "long_description",
+   "fieldtype": "Long Text",
+   "label": "Long Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "label": "Varient Enable"
+  },
+  {
+   "default": "0",
+   "fieldname": "continue_selling",
+   "fieldtype": "Check",
+   "label": "Continue Selling When Out of Stock"
+  },
+  {
+   "fieldname": "varient",
+   "fieldtype": "JSON",
+   "label": "Varient"
+  },
+  {
+   "fieldname": "variants",
+   "fieldtype": "Table",
+   "label": "Variants",
+   "options": "Ecommerce Product Variant"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-28 17:19:00.269120",
+ "modified_by": "Administrator",
+ "module": "Ecommerce",
+ "name": "Ecommerce Product",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,23 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["category"],
+ "fields": [
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Category",
+   "options": "Ecommerce Categories",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "module": "Ecommerce",
+ "name": "Ecommerce Product Category",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

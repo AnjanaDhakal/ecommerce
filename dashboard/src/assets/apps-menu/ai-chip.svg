@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 112" fill="none">
+  <defs>
+    <linearGradient id="ai-chip-gradient" x1="64" y1="10" x2="64" y2="104" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A000DF"/>
+      <stop offset="0.48" stop-color="#7161E8"/>
+      <stop offset="1" stop-color="#00D8D2"/>
+    </linearGradient>
+  </defs>
+
+  <g stroke="url(#ai-chip-gradient)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="39" y="31" width="50" height="50" rx="5"/>
+    <rect x="47" y="39" width="34" height="34" rx="2"/>
+
+    <path d="M25 45h14M17 35h12v-9h10M23 56H9M25 67h14M17 77h12v9h10"/>
+    <path d="M103 45H89M111 35H99v-9H89M105 56h14M103 67H89M111 77H99v9H89"/>
+
+    <path d="M48 31V19h-8v-7M59 31V12M70 31V12M81 31V19h8v-7"/>
+    <path d="M48 81v12h-8v7M59 81v19M70 81v19M81 81v12h8v7"/>
+  </g>
+
+  <g fill="url(#ai-chip-gradient)">
+    <circle cx="17" cy="35" r="6"/>
+    <circle cx="9" cy="56" r="6"/>
+    <circle cx="17" cy="77" r="6"/>
+    <circle cx="40" cy="12" r="6"/>
+    <circle cx="59" cy="12" r="6"/>
+    <circle cx="70" cy="12" r="6"/>
+    <circle cx="89" cy="12" r="6"/>
+    <circle cx="111" cy="35" r="6"/>
+    <circle cx="119" cy="56" r="6"/>
+    <circle cx="111" cy="77" r="6"/>
+    <circle cx="40" cy="100" r="6"/>
+    <circle cx="59" cy="100" r="6"/>
+    <circle cx="70" cy="100" r="6"/>
+    <circle cx="89" cy="100" r="6"/>
+  </g>
+
+  <text x="64" y="65" fill="url(#ai-chip-gradient)" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" text-anchor="middle">AI</text>
+</svg>

@@ -1,0 +1,42 @@
+{
+ "actions": [],
+ "autoname": "field:visit_key",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "visit_key",
+  "website",
+  "vendor_id",
+  "visitor_hash",
+  "visit_date",
+  "page_views",
+  "product_views",
+  "cart_views",
+  "checkout_views",
+  "source",
+  "last_path"
+ ],
+ "fields": [
+  {"fieldname":"visit_key","fieldtype":"Data","label":"Visit Key","read_only":1,"unique":1},
+  {"fieldname":"website","fieldtype":"Link","label":"Website","options":"Ecommerce Vendor Website","reqd":1,"in_list_view":1},
+  {"fieldname":"vendor_id","fieldtype":"Link","label":"Store Owner","options":"User","reqd":1,"in_list_view":1},
+  {"fieldname":"visitor_hash","fieldtype":"Data","label":"Anonymous Visitor","reqd":1},
+  {"fieldname":"visit_date","fieldtype":"Date","label":"Visit Date","reqd":1,"in_list_view":1},
+  {"default":"1","fieldname":"page_views","fieldtype":"Int","label":"Page Views","read_only":1},
+  {"default":"0","fieldname":"product_views","fieldtype":"Int","label":"Product Views","read_only":1},
+  {"default":"0","fieldname":"cart_views","fieldtype":"Int","label":"Cart Views","read_only":1},
+  {"default":"0","fieldname":"checkout_views","fieldtype":"Int","label":"Checkout Views","read_only":1},
+  {"fieldname":"source","fieldtype":"Data","label":"Traffic Source","read_only":1},
+  {"fieldname":"last_path","fieldtype":"Data","label":"Last Path","read_only":1}
+ ],
+ "index_web_pages_for_search": 0,
+ "module": "Ecommerce",
+ "name": "Ecommerce Storefront Visit",
+ "naming_rule": "By fieldname",
+ "permissions": [
+  {"read":1,"report":1,"role":"System Manager"}
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

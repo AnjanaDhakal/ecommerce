@@ -1,0 +1,192 @@
+{
+ "actions": [],
+ "autoname": "autoincrement",
+ "creation": "2025-07-29 15:23:05.163120",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "vendor_id",
+  "vendor_name",
+  "description",
+  "favicon",
+  "template",
+  "column_break_mwgi",
+  "website_link",
+  "custom_domain",
+  "subdomain",
+  "canonical_url",
+  "type",
+  "status",
+  "monthly_sales_target",
+  "tawk_widget_id",
+  "primary_color",
+  "secondary_color",
+  "additional_color1",
+  "additional_color2",
+  "font",
+  "blocks_section",
+  "blocks",
+  "pages_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "website_link",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Website Link",
+   "reqd": 1
+  },
+  {
+   "description": "Enter a hostname such as shop.example.com and point its DNS record to this ecommerce server.",
+   "fieldname": "custom_domain",
+   "fieldtype": "Data",
+   "label": "Custom Domain",
+   "unique": 1
+  },
+  {
+   "description": "Fixed public URL used by SEO keyword links in builder blocks.",
+   "fieldname": "canonical_url",
+   "fieldtype": "Data",
+   "label": "Published Website URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subdomain",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Storefront Subdomain",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "vendor_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Vendor ID",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_mwgi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "vendor_id.full_name",
+   "fieldname": "vendor_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Vendor Name",
+   "options": "User"
+  },
+  {
+   "fieldname": "blocks_section",
+   "fieldtype": "Section Break",
+   "label": "Blocks"
+  },
+  {
+   "fieldname": "blocks",
+   "fieldtype": "JSON",
+   "label": "Blocks"
+  },
+  {
+   "fieldname": "pages_tab",
+   "fieldtype": "Tab Break",
+   "label": "Page"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Ecommerce\nBlog"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Long Text",
+   "label": "Description"
+  },
+  {
+   "description": "Square PNG, JPEG, GIF, or WebP image shown in browser tabs for this storefront.",
+   "fieldname": "favicon",
+   "fieldtype": "Attach Image",
+   "label": "Website Icon"
+  },
+  {
+   "default": "Published",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Published\nDraft\nDiscarded"
+  },
+  {
+   "default": "0",
+   "description": "Monthly confirmed-sales goal used by ecommerce analytics.",
+   "fieldname": "monthly_sales_target",
+   "fieldtype": "Currency",
+   "label": "Monthly Sales Target",
+   "non_negative": 1
+  },
+  {
+   "description": "Tawk.to embed path in property-id/widget-id format.",
+   "fieldname": "tawk_widget_id",
+   "fieldtype": "Data",
+   "label": "Tawk.to Widget ID"
+  },
+  {
+   "fieldname": "primary_color",
+   "fieldtype": "Data",
+   "label": "Primary Color"
+  },
+  {
+   "fieldname": "secondary_color",
+   "fieldtype": "Data",
+   "label": "Secondary Color"
+  },
+  {
+   "fieldname": "font",
+   "fieldtype": "Data",
+   "label": "Font"
+  },
+  {
+   "fieldname": "additional_color1",
+   "fieldtype": "Data",
+   "label": "Additional Color1"
+  },
+  {
+   "fieldname": "additional_color2",
+   "fieldtype": "Data",
+   "label": "Additional Color2"
+  },
+  {
+   "fieldname": "template",
+   "fieldtype": "Data",
+   "label": "Template"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-24 15:05:54.862138",
+ "modified_by": "Administrator",
+ "module": "Ecommerce",
+ "name": "Ecommerce Vendor Website",
+ "naming_rule": "Autoincrement",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

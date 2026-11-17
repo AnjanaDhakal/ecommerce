@@ -1,0 +1,24 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["product_id","product_name","variant_name","variant_id","sku","quantity","unit_price","line_total","weight"],
+ "fields": [
+  {"fieldname":"product_id","fieldtype":"Link","label":"Product","options":"Ecommerce Product","reqd":1,"in_list_view":1},
+  {"fieldname":"product_name","fieldtype":"Data","label":"Product Name","reqd":1,"in_list_view":1},
+  {"fieldname":"variant_name","fieldtype":"Data","label":"Variant","in_list_view":1},
+  {"fieldname":"variant_id","fieldtype":"Data","label":"Variant ID"},
+  {"fieldname":"sku","fieldtype":"Data","label":"SKU"},
+  {"fieldname":"quantity","fieldtype":"Int","label":"Quantity","reqd":1,"in_list_view":1},
+  {"fieldname":"unit_price","fieldtype":"Currency","label":"Unit Price","reqd":1,"in_list_view":1},
+  {"fieldname":"line_total","fieldtype":"Currency","label":"Line Total","reqd":1},
+  {"fieldname":"weight","fieldtype":"Float","label":"Unit Weight"}
+ ],
+ "istable": 1,
+ "module": "Ecommerce",
+ "name": "Ecommerce Ecommerce Order Item",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

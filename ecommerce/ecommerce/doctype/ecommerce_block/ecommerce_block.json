@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:block_name",
+ "creation": "2025-08-25 12:25:18.915169",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "block_name",
+  "block_image",
+  "column_break_xlkd",
+  "type",
+  "section_break_jliu",
+  "block",
+  "section_break_lhec",
+  "model",
+  "script",
+  "style",
+  "data_script"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_jliu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Code",
+   "label": "Block"
+  },
+  {
+   "fieldname": "section_break_lhec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "JSON",
+   "label": "Model"
+  },
+  {
+   "fieldname": "column_break_xlkd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "block_name",
+   "fieldtype": "Data",
+   "label": "Block Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "block_image",
+   "fieldtype": "Attach Image",
+   "label": "Block Image"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "Header\nMain\nFooter"
+  },
+  {
+   "fieldname": "script",
+   "fieldtype": "Code",
+   "label": "Script",
+   "options": "Javascript"
+  },
+  {
+   "fieldname": "style",
+   "fieldtype": "Code",
+   "label": "Style"
+  },
+  {
+   "description": "blockdata.events = frappe.get_list(\"Event\")\n<br>\n<b>Note:</b> Each key value of data should be a list.",
+   "fieldname": "data_script",
+   "fieldtype": "Code",
+   "label": "Data Script",
+   "options": "Python"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-21 15:01:05.491765",
+ "modified_by": "Administrator",
+ "module": "Ecommerce",
+ "name": "Ecommerce Block",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

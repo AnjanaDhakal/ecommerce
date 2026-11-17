@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <rect x="2" y="2" width="28" height="28" rx="8" fill="url(#commerce-gradient)"/>
+  <path d="M10 13h12l1 11H9l1-11Z" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M13 14v-2a3 3 0 0 1 6 0v2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="commerce-gradient" x1="5" y1="4" x2="27" y2="29" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB923C"/><stop offset="1" stop-color="#EA580C"/>
+    </linearGradient>
+  </defs>
+</svg>

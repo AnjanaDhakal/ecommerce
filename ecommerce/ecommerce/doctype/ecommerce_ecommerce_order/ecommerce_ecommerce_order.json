@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "website", "vendor_id", "status", "system_order", "customer_section",
+  "customer_name", "phone", "city_area", "delivery_address",
+  "destination_branch", "pickup_branch", "order_note", "items_section",
+  "items", "totals_section", "subtotal", "delivery_amount", "grand_total",
+  "package_weight", "package_qty", "payment_method", "timeline_section",
+  "packed_at", "confirmed_at"
+ ],
+ "fields": [
+  {"fieldname":"website","fieldtype":"Link","label":"Website","options":"Ecommerce Vendor Website","reqd":1,"in_list_view":1},
+  {"fieldname":"vendor_id","fieldtype":"Link","label":"Store Owner","options":"User","reqd":1,"in_list_view":1},
+  {"default":"Pending","fieldname":"status","fieldtype":"Select","label":"Status","options":"Pending\nPacked\nConfirmed\nCancelled","reqd":1,"in_list_view":1},
+  {"fieldname":"system_order","fieldtype":"Data","label":"External Order","read_only":1,"in_list_view":1},
+  {"fieldname":"customer_section","fieldtype":"Section Break","label":"Customer"},
+  {"fieldname":"customer_name","fieldtype":"Data","label":"Customer Name","reqd":1},
+  {"fieldname":"phone","fieldtype":"Data","label":"Phone","reqd":1},
+  {"fieldname":"city_area","fieldtype":"Data","label":"City / Area","reqd":1},
+  {"fieldname":"delivery_address","fieldtype":"Small Text","label":"Delivery Address","reqd":1},
+  {"fieldname":"destination_branch","fieldtype":"Data","label":"Destination / Area"},
+  {"fieldname":"pickup_branch","fieldtype":"Data","label":"Pickup Location"},
+  {"fieldname":"order_note","fieldtype":"Small Text","label":"Order Note"},
+  {"fieldname":"items_section","fieldtype":"Section Break","label":"Items"},
+  {"fieldname":"items","fieldtype":"Table","label":"Items","options":"Ecommerce Ecommerce Order Item","reqd":1},
+  {"fieldname":"totals_section","fieldtype":"Section Break","label":"Totals"},
+  {"fieldname":"subtotal","fieldtype":"Currency","label":"Subtotal","reqd":1},
+  {"fieldname":"delivery_amount","fieldtype":"Currency","label":"Delivery Amount","reqd":1},
+  {"fieldname":"grand_total","fieldtype":"Currency","label":"Grand Total","reqd":1},
+  {"fieldname":"package_weight","fieldtype":"Float","label":"Package Weight"},
+  {"fieldname":"package_qty","fieldtype":"Int","label":"Package Quantity"},
+  {"default":"Cash on Delivery","fieldname":"payment_method","fieldtype":"Data","label":"Payment Method","read_only":1},
+  {"fieldname":"timeline_section","fieldtype":"Section Break","label":"Timeline"},
+  {"fieldname":"packed_at","fieldtype":"Datetime","label":"Packed At","read_only":1},
+  {"fieldname":"confirmed_at","fieldtype":"Datetime","label":"Confirmed At","read_only":1}
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "module": "Ecommerce",
+ "name": "Ecommerce Ecommerce Order",
+ "naming_rule": "By script",
+ "permissions": [
+  {"create":1,"delete":1,"email":1,"export":1,"print":1,"read":1,"report":1,"role":"System Manager","share":1,"write":1}
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

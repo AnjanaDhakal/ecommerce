@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-10-28 12:07:26.269004",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "categories_name",
+  "website",
+  "parent_category",
+  "categories_logo",
+  "publication_status",
+  "column_break_gshm",
+  "slug"
+ ],
+ "fields": [
+  {
+   "fieldname": "categories_name",
+   "fieldtype": "Data",
+   "label": "Categories Name"
+  },
+  {
+   "fieldname": "website",
+   "fieldtype": "Link",
+   "label": "Website",
+   "options": "Ecommerce Vendor Website"
+  },
+  {
+   "fieldname": "parent_category",
+   "fieldtype": "Link",
+   "label": "Parent Category",
+   "options": "Ecommerce Categories"
+  },
+  {
+   "fieldname": "categories_logo",
+   "fieldtype": "Attach",
+   "label": "Categories Logo"
+  },
+  {
+   "default": "Published",
+   "fieldname": "publication_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Storefront Status",
+   "options": "Published\nHidden\nArchived",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_gshm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "label": "Slug"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-10-28 12:08:37.133226",
+ "modified_by": "Administrator",
+ "module": "Ecommerce",
+ "name": "Ecommerce Categories",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,24 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": ["variant_name", "variant_image", "selling_price", "discounted_price", "cost_price", "quantity", "sku", "weight", "volume"],
+ "fields": [
+  {"fieldname": "variant_name", "fieldtype": "Data", "in_list_view": 1, "label": "Variant"},
+  {"fieldname": "variant_image", "fieldtype": "Data", "label": "Variant Image"},
+  {"fieldname": "selling_price", "fieldtype": "Currency", "in_list_view": 1, "label": "Selling Price"},
+  {"fieldname": "discounted_price", "fieldtype": "Currency", "label": "Discounted Price"},
+  {"fieldname": "cost_price", "fieldtype": "Currency", "label": "Cost Price"},
+  {"fieldname": "quantity", "fieldtype": "Float", "in_list_view": 1, "label": "Quantity"},
+  {"fieldname": "sku", "fieldtype": "Data", "in_list_view": 1, "label": "SKU"},
+  {"fieldname": "weight", "fieldtype": "Float", "label": "Weight"},
+  {"fieldname": "volume", "fieldtype": "Float", "label": "Volume"}
+ ],
+ "istable": 1,
+ "module": "Ecommerce",
+ "name": "Ecommerce Product Variant",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
