@@ -1,7 +1,6 @@
 <template>
   <div
     class="fixed inset-0 flex items-center justify-center z-50"
-    v-if="!isloaded"
   >
     <div class="v-spinner bg-white rounded-md p-1" v-show="loading">
       <div

@@ -21,7 +21,6 @@ import { session } from '../data/session'
 import userInfo from '../data/userInfo'
 import { h } from 'vue'
 import { useRouter } from 'vue-router'
-import vendorProfile from '../data/vendorProfile'
 
 // Correct import for Feather Icons
 
@@ -54,13 +53,6 @@ const userImage = computed(() => {
 const router = useRouter()
 
 const imageUrl = ref('https://i.pravatar.cc/100')
-
-const fetchVendorId = async () => {
-  const vendorId = await vendorProfile.fetch()
-
- //  // console.log("idman", vendorId.vendor_info.name);
-}
-fetchVendorId() // Call the async function
 
 const showOptions = [
   {

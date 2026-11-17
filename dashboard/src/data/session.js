@@ -70,16 +70,9 @@ import { computed, reactive, ref } from 'vue'
 import { createResource } from 'frappe-ui'
 
 import { userResource } from './user'
+import { loginUrl, sessionUser } from './auth'
 
 const isLoggingOut = ref(false)
-export function sessionUser() {
-  const cookies = new URLSearchParams(document.cookie.split('; ').join('&'))
-  let _sessionUser = cookies.get('user_id')
-  if (_sessionUser === 'Guest') {
-    _sessionUser = null
-  }
-  return _sessionUser
-}
 
 
 function clearBrowserCache() {
@@ -127,7 +120,7 @@ export const session = reactive({
       clearBrowserCache()
       userResource.reset()
       session.user = null
-      window.location.replace(`${window.location.origin}/dashboard/login`)
+      window.location.replace(loginUrl())
     },
     onError(error) {
       console.warn('Logout error:', error)

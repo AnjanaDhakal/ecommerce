@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { confirmDiscardChanges } from './composables/useUnsavedChanges'
+import { loginUrl, sessionUser } from './data/auth'
 
 const routes = [
   { path: '/', redirect: '/website' },
@@ -42,6 +43,10 @@ const router = createRouter({
 
 router.beforeEach(async (to, from) => {
   if (to.meta.requiresLogin === false) return true
+  if (!sessionUser()) {
+    window.location.replace(loginUrl(to.fullPath))
+    return false
+  }
   if (from.name && !(await confirmDiscardChanges())) return false
   return true
 })
