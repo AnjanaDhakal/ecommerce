@@ -32,7 +32,14 @@ export default defineConfig({
   },
 
   optimizeDeps: {
-    include: ["frappe-ui > feather-icons", "showdown", "engine.io-client"],
+    include: [
+      "frappe-ui > feather-icons",
+      "showdown",
+      "engine.io-client",
+      "socket.io-client",
+      "socket.io-parser",
+      "debug",
+    ],
   },
 
   server: {
